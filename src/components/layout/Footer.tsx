@@ -15,7 +15,7 @@ const Footer = () => {
             />
           </Link>
         </div>
-        
+
         <div className="links order-3 lg:order-2">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
             <Link
@@ -23,7 +23,9 @@ const Footer = () => {
               className="flex items-center gap-2 text-gray-700 hover:text-blue-700 transition-colors"
             >
               <Airplay size={16} />
-              <span className="text-xs sm:text-sm font-medium">Policy Making</span>
+              <span className="text-xs sm:text-sm font-medium">
+                Policy Making
+              </span>
             </Link>
             <Link
               to="#"
@@ -44,16 +46,18 @@ const Footer = () => {
               className="flex items-center gap-2 text-gray-700 hover:text-blue-700 transition-colors"
             >
               <Award size={16} />
-              <span className="text-xs sm:text-sm font-medium">Governments</span>
+              <span className="text-xs sm:text-sm font-medium">
+                Governments
+              </span>
             </Link>
           </div>
         </div>
-        
+
         <div className="socials order-2 lg:order-3">
           <Socials />
         </div>
       </div>
-      <p className="text-center text-xs sm:text-sm mt-5 text-gray-600">
+      <p className="text-center !text-xs !sm:text-sm mt-5 text-gray-600">
         Copyright © 2025 EU Matrix
       </p>
     </div>

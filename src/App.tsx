@@ -18,7 +18,7 @@ function App() {
           <Header />
         </>
       )}
-      <div className="px-2 sm:px-4 lg:px-6 max-w-7xl mx-auto">
+      <div className="px-2 sm:px-4 lg:px-6 max-w-10xl mx-auto">
         <AppRouter />
         {!shouldHideLayout && <Footer />}
       </div>

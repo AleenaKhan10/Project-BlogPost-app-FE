@@ -24,7 +24,7 @@ const BlogDetails = () => {
             readTime={blog.readTime}
             className="mb-5"
           />
-          <div className="rounded-md overflow-hidden h-[450px]">
+          <div className="rounded-md overflow-hidden h-[250px] lg:h-[450px] ">
             <img
               className="h-full w-full object-cover"
               src={blog.imageUrl}

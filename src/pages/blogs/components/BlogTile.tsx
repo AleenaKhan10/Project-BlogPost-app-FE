@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import BlogMeta from "./BlogMeta";
 
-interface BlogTileProps {
+export interface BlogTileProps {
   blog: {
     imageUrl: string;
     heading: string;
@@ -27,10 +27,10 @@ const BlogTile: React.FC<BlogTileProps> = ({ blog }) => {
       className="bg-white p-3 sm:p-4 rounded-md flex flex-col sm:flex-row mb-4 sm:mb-3 gap-3 sm:gap-5 items-start sm:items-center cursor-pointer group hover:shadow-md transition-all duration-300"
     >
       <div className="blog-img overflow-hidden rounded-md w-full sm:flex-1">
-        <img 
-          src={imageUrl} 
-          alt={heading} 
-          className="h-[200px] sm:h-[180px] lg:h-[240px] w-full object-cover group-hover:scale-105 transition-transform duration-300" 
+        <img
+          src={imageUrl}
+          alt={heading}
+          className="h-[200px] sm:h-[180px] lg:h-[240px] w-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="blog-content w-full sm:flex-1">
