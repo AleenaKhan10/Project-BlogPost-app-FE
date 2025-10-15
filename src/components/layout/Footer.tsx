@@ -4,7 +4,7 @@ import Socials from "../common/Socials";
 
 const Footer = () => {
   return (
-    <div className="bg-white p-5 rounded-md">
+    <div className="bg-white p-5 rounded-md mt-5">
       <div className="flex items-center justify-between ">
         <div className="brand">
           <Link to={"/"}>

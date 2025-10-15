@@ -1,5 +1,7 @@
 import { Calendar1, Timer } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import BlogMeta from "./BlogMeta";
 
 interface BlogTileProps {
   blog: {
@@ -13,22 +15,26 @@ interface BlogTileProps {
 
 const BlogTile: React.FC<BlogTileProps> = ({ blog }) => {
   const { imageUrl, heading, description, date, readTime } = blog;
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/blog/" + blog.heading, { state: blog });
+  };
   return (
-    <div className="bg-white p-2 rounded-md flex mb-3 gap-5 items-center">
+    <div
+      onClick={handleClick}
+      className="bg-white p-2 rounded-md flex mb-3 gap-5 items-center cursor-pointer group hover:shadow-md transition-all duration-300"
+    >
       <div className="blog-img overflow-hidden rounded-md flex-1">
         <img src={imageUrl} alt="" className="h-[240px] w-full object-cover" />
       </div>
       <div className="blog-content flex-1">
-        <strong className="text-lg !mb-3">{heading}</strong>
+        <strong className="text-lg !mb-3 group-hover:text-blue-600 transition-colors duration-300">
+          {heading}
+        </strong>
         <p>{description}</p>
-        <div className="flex gap-3 mt-3 !tex-sm text-gray-500">
-          <span className="flex items-center gap-2">
-            <Calendar1 size={18} /> {date}
-          </span>
-          <span className="flex items-center gap-1">
-            <Timer className="" size={18} /> {readTime}
-          </span>
-        </div>
+        <BlogMeta date={date} readTime={readTime} />
       </div>
     </div>
   );

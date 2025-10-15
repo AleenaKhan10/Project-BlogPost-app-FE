@@ -20,7 +20,7 @@ function App() {
       )}
       <div className="px-2">
         <AppRouter />
-        <Footer />
+        {!shouldHideLayout && <Footer />}
       </div>
     </>
   );

@@ -10,6 +10,7 @@ const BlogIntro = () => {
           backgroundImage:
             "url(https://themeger.shop/wordpress/katen/wp-content/uploads/2022/09/map-bg.png)",
           backgroundPosition: "center center",
+          zIndex: "0",
         }}
       ></div>
       <div className="mb-5">
