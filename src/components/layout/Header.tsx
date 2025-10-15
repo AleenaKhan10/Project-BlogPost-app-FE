@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AppButton from "../common/AppButton";
-import { Airplay, Anvil, Aperture, Award, LogIn } from "lucide-react";
+import { Airplay, Anvil, Aperture, Award, LogIn, Search } from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -53,6 +53,7 @@ const Header = () => {
 
       {/* Right Section - Buttons */}
       <div className="flex items-center gap-3">
+        <Search className="cursor-pointer" />
         <AppButton
           text="Login"
           className="bg-blue-950 hover:bg-blue-700 text-white !rounded-full px-6 py-2 cursor-pointer"
