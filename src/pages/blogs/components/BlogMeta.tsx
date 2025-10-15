@@ -9,12 +9,12 @@ interface BlogMetaProps {
 
 const BlogMeta: React.FC<BlogMetaProps> = ({ date, readTime, className }) => {
   return (
-    <div className={`flex gap-3 mt-3 !tex-sm text-gray-500 ${className}`}>
+    <div className={`flex flex-col sm:flex-row gap-2 sm:gap-3 mt-3 text-xs sm:text-sm text-gray-500 ${className}`}>
       <span className="flex items-center gap-2">
-        <Calendar1 size={18} /> {date}
+        <Calendar1 size={16} /> {date}
       </span>
-      <span className="flex items-center gap-1">
-        <Timer className="" size={18} /> {readTime}
+      <span className="flex items-center gap-2">
+        <Timer size={16} /> {readTime}
       </span>
     </div>
   );

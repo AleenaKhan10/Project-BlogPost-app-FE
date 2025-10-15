@@ -17,7 +17,7 @@ const BlogDetails = () => {
   return (
     <>
       <div className="grid grid-cols-4 gap-5">
-        <div className="col-span-3 bg-white rounded-md p-5">
+        <div className="col-span-4 lg:col-span-3  bg-white rounded-md p-5">
           <h2 className="mb-5">{blog.heading}</h2>
           <BlogMeta
             date={blog.date}
@@ -51,7 +51,7 @@ const BlogDetails = () => {
             </p>
           </div>
         </div>
-        <div className="">
+        <div className="col-span-4 lg:col-span-1 ">
           <BlogIntro />
           <strong className=" mt-5 block">Explore Categories</strong>
           {categories.slice(0, 6).map((c, index) => (
