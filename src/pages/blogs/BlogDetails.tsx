@@ -32,8 +32,8 @@ const BlogDetails = () => {
             />
           </div>
           <div className="mt-5">
-            <p>{blog.description}</p>
-            <p>
+            <p className="text-sm">{blog.description}</p>
+            <p className="text-sm">
               In today’s fast-paced digital landscape, innovation is no longer
               optional — it’s essential. From artificial intelligence to clean
               energy solutions, the world is evolving faster than ever, and

@@ -24,7 +24,7 @@ const Blogs = () => {
       {/* BLOGS */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-[180px] sm:mt-[150px] lg:mt-[180px]">
         {/* LEFT SIDE POSTS */}
-        <div className="blogs-list lg:col-span-3 order-2 lg:order-1">
+        <div className="blogs-list lg:col-span-3 order-1 lg:order-2">
           {blogPosts
             .filter((b) => b.id !== randomPost.id) // exclude the random post
             .map((b, index) => (
