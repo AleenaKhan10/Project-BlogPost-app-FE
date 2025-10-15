@@ -1,4 +1,4 @@
-import { Calendar1, Clock11, Timer } from "lucide-react";
+import { Calendar1, Timer } from "lucide-react";
 import React from "react";
 
 interface BlogTileProps {

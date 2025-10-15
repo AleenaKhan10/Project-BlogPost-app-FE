@@ -1,16 +1,6 @@
-import {
-  Airplay,
-  Anvil,
-  Aperture,
-  Award,
-  Dribbble,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
-import React from "react";
+import { Airplay, Anvil, Aperture, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import Socials from "../common/Socials";
 
 const Footer = () => {
   return (
@@ -57,13 +47,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="socials">
-          <div className="social-media  flex items-center justify-center gap-5">
-            <Facebook size={18} />
-            <Instagram size={18} />
-            <Dribbble size={18} />
-            <Youtube size={18} />
-            <Linkedin size={18} />
-          </div>
+          <Socials />
         </div>
       </div>
       <p className="text-center !text-sm mt-5">Copyright © 2025 EU Matrix</p>

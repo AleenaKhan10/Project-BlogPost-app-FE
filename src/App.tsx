@@ -14,7 +14,7 @@ function App() {
     <>
       {!shouldHideLayout && (
         <>
-          <Topbar />
+          {/* <Topbar /> */}
           <Header />
         </>
       )}
