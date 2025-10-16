@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AppButton from "../common/AppButton";
+import SearchModal from "../common/SearchModal";
 import { Airplay, Anvil, Aperture, Award, LogIn, Search, Menu, X } from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const openSearchModal = () => {
+    setIsSearchModalOpen(true);
+  };
+
+  const closeSearchModal = () => {
+    setIsSearchModalOpen(false);
   };
 
   return (
@@ -59,7 +69,11 @@ const Header = () => {
 
         {/* Desktop Right Section - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-3">
-          <Search className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors" size={20} />
+          <Search 
+            className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors" 
+            size={20} 
+            onClick={openSearchModal}
+          />
           <AppButton
             text="Login"
             className="bg-blue-950 hover:bg-blue-700 text-white !rounded-full px-4 lg:px-6 py-2 cursor-pointer text-sm transition-colors"
@@ -77,7 +91,11 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-2">
-          <Search className="cursor-pointer text-gray-600" size={20} />
+          <Search 
+            className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors" 
+            size={20} 
+            onClick={openSearchModal}
+          />
           <button
             onClick={toggleMobileMenu}
             className="p-2 text-gray-600 hover:text-blue-700 transition-colors"
@@ -151,6 +169,12 @@ const Header = () => {
           </div>
         </div>
       )}
+
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={isSearchModalOpen} 
+        onClose={closeSearchModal} 
+      />
     </div>
   );
 };
