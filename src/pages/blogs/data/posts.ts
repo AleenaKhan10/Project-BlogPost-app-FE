@@ -8,6 +8,7 @@ export const blogPosts = [
     imageUrl:
       "https://platform.codesupply.co/platform/wp-content/uploads/sites/2/2025/05/demo-image-0022.webp",
     readTime: "5 min read",
+    tags: ["Clean Energy", "Solar Power", "Sustainability", "Innovation"],
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const blogPosts = [
     imageUrl:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
     readTime: "7 min read",
+    tags: ["AI", "Machine Learning", "Technology", "Future"],
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const blogPosts = [
     imageUrl:
       "https://themeger.shop/wordpress/katen/wp-content/uploads/2022/08/david-van-dijk-255503-unsplash-330x250.jpg",
     readTime: "4 min read",
+    tags: ["Remote Work", "Productivity", "Work Culture", "Digital Tools"],
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const blogPosts = [
     imageUrl:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
     readTime: "3 min read",
+    tags: ["Minimalism", "Lifestyle", "Wellness", "Focus"],
   },
   {
     id: 5,
@@ -48,15 +52,17 @@ export const blogPosts = [
     imageUrl:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
     readTime: "6 min read",
+    tags: ["Web Development", "JavaScript", "Frontend", "Design Systems"],
   },
   {
     id: 6,
     heading: "How Remote Work Enhances My Focus, Routine, and Output",
     description:
-      " Just something small that quietly stood out to me-nothing loud or flashy, just a subtle detail that made a quiet impact on me.",
+      "Just something small that quietly stood out to me—nothing loud or flashy, just a subtle detail that made a quiet impact on me.",
     date: "2025-08-12",
     imageUrl:
       "https://platform.codesupply.co/platform/wp-content/uploads/sites/2/2025/06/demo-image-0011.webp",
     readTime: "6 min read",
+    tags: ["Remote Work", "Focus", "Self Improvement", "Work Routine"],
   },
 ];

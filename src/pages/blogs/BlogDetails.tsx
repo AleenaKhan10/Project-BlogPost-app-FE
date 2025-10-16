@@ -18,7 +18,9 @@ const BlogDetails = () => {
     <>
       <div className="grid grid-cols-4 gap-5">
         <div className="col-span-4 lg:col-span-3  bg-white rounded-md p-5">
-          <h2 className="mb-5">{blog.heading}</h2>
+          <h1 className="mb-5 text-base sm:text-lg lg:text-xl font-bold">
+            {blog.heading}
+          </h1>
           <BlogMeta
             date={blog.date}
             readTime={blog.readTime}

@@ -1,4 +1,3 @@
-import { Calendar1Icon, Timer } from "lucide-react";
 import { useEffect, useState } from "react";
 import BlogTile from "./components/BlogTile";
 import { blogPosts } from "./data/posts";
@@ -6,6 +5,7 @@ import { categories } from "./data/categories";
 import Category from "./components/Category";
 import BlogIntro from "../../components/common/BlogIntro";
 import MainPost from "./components/MainPost";
+import AppButton from "../../components/common/AppButton";
 
 const Blogs = () => {
   const [randomPost, setRandomPost] = useState(blogPosts[0]);

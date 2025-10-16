@@ -34,7 +34,7 @@ const BlogTile: React.FC<BlogTileProps> = ({ blog }) => {
         />
       </div>
       <div className="blog-content w-full sm:flex-1">
-        <strong className="text-base sm:text-lg lg:text-xl mb-2 sm:mb-3 block group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+        <strong className="text-base sm:text-lg lg:text-xl mb-2 sm:mb-3 block group-hover:text-gray-900 transition-colors duration-300 leading-tight">
           {heading}
         </strong>
         <p className="text-sm sm:text-base text-gray-600 mb-3 leading-relaxed line-clamp-3">
