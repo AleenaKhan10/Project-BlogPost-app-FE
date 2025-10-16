@@ -6,6 +6,7 @@ import Category from "./components/Category";
 import BlogIntro from "../../components/common/BlogIntro";
 import MainPost from "./components/MainPost";
 import AppButton from "../../components/common/AppButton";
+import { blogService } from "../../services/blogs.service";
 
 const Blogs = () => {
   const [randomPost, setRandomPost] = useState(blogPosts[0]);
@@ -14,7 +15,18 @@ const Blogs = () => {
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * blogPosts.length);
     setRandomPost(blogPosts[randomIndex]);
+    fetchBlogs();
   }, []);
+
+  //? METHODS
+  const fetchBlogs = async () => {
+    try {
+      const blogs = await blogService.getAll();
+      console.log("Blogs fetched:", blogs);
+    } catch (err) {
+      console.error("Failed to load blogs:", err);
+    }
+  };
 
   return (
     <div className="w-full">
