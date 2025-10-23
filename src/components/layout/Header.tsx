@@ -2,7 +2,16 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AppButton from "../common/AppButton";
 import SearchModal from "../common/SearchModal";
-import { Airplay, Anvil, Aperture, Award, LogIn, Search, Menu, X } from "lucide-react";
+import {
+  Airplay,
+  Anvil,
+  Aperture,
+  Award,
+  LogIn,
+  Search,
+  Menu,
+  X,
+} from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -36,7 +45,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation - Hidden on mobile */}
-        <div className="hidden lg:flex items-center gap-6">
+        {/* <div className="hidden lg:flex items-center gap-6">
           <Link
             to="#"
             className="flex items-center gap-2 text-gray-700 hover:text-blue-700 transition-colors"
@@ -65,13 +74,13 @@ const Header = () => {
             <Award size={18} />
             <span className="text-sm font-medium">Governments</span>
           </Link>
-        </div>
+        </div> */}
 
         {/* Desktop Right Section - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-3">
-          <Search 
-            className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors" 
-            size={20} 
+          <Search
+            className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors"
+            size={20}
             onClick={openSearchModal}
           />
           <AppButton
@@ -91,9 +100,9 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-2">
-          <Search 
-            className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors" 
-            size={20} 
+          <Search
+            className="cursor-pointer text-gray-600 hover:text-blue-700 transition-colors"
+            size={20}
             onClick={openSearchModal}
           />
           <button
@@ -110,7 +119,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
           {/* Mobile Navigation Links */}
-          <div className="flex flex-col space-y-3 mb-4">
+          {/* <div className="flex flex-col space-y-3 mb-4">
             <Link
               to="#"
               className="flex items-center gap-2 text-gray-700 hover:text-blue-700 py-2 transition-colors"
@@ -143,7 +152,7 @@ const Header = () => {
               <Award size={18} />
               <span className="text-sm font-medium">Governments</span>
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Action Buttons */}
           <div className="flex flex-col space-y-2">
@@ -171,10 +180,7 @@ const Header = () => {
       )}
 
       {/* Search Modal */}
-      <SearchModal 
-        isOpen={isSearchModalOpen} 
-        onClose={closeSearchModal} 
-      />
+      <SearchModal isOpen={isSearchModalOpen} onClose={closeSearchModal} />
     </div>
   );
 };
