@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import BlogMeta from "./components/BlogMeta";
 import BlogIntro from "../../components/common/BlogIntro";
@@ -10,10 +10,12 @@ import BlogTags from "../../components/common/BlogTags";
 import { Clock, Calendar, Eye, Share2, Bookmark, Heart } from "lucide-react";
 
 const BlogDetails = () => {
-  const { heading } = useParams();
-
   const location = useLocation();
-  const blog = location.state;
+  const navigate = useNavigate();
+  const { heading } = useParams();
+  const [blog, setBlog] = useState(location.state);
+
+  // const blog = location.state;
 
   if (!blog) return <p>No blog data found.</p>;
 
@@ -38,6 +40,14 @@ const BlogDetails = () => {
   };
 
   const relatedPosts = getRelatedPosts();
+
+  //? EFFECTS
+  useEffect(() => {
+    if (location.state) {
+      setBlog(location.state);
+      window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top on new post
+    }
+  }, [location.state]);
 
   return (
     <div className=" mx-auto">
@@ -151,7 +161,12 @@ const BlogDetails = () => {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-semibold text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2 mb-1">
+                      <h4
+                        onClick={() =>
+                          navigate("/blog/" + post.heading, { state: post })
+                        }
+                        className="text-sm font-semibold text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2 mb-1"
+                      >
                         {post.heading}
                       </h4>
                       <div className="flex items-center gap-2 text-xs text-gray-500">

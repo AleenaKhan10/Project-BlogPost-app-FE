@@ -21,7 +21,7 @@ const Category: React.FC<CategoryProps> = ({ category }) => {
           <strong className="text-lg">{title}</strong>
           <p className="!text-sm">{desc}</p>
           <Link
-            to={"#"}
+            to={`/blog/category/${title}`}
             className="flex items-center gap-2 mt-3 font-semibold text-sm hover:text-blue-600"
           >
             {" "}

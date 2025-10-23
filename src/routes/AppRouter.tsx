@@ -5,6 +5,7 @@ import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import Blogs from "../pages/blogs/Blogs";
 import BlogDetails from "../pages/blogs/BlogDetails";
+import CategoryBlogs from "../pages/blogs/CategoryBlogs";
 
 const AppRouter = () => {
   return (
@@ -13,6 +14,7 @@ const AppRouter = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/blog/:heading" element={<BlogDetails />} />
       <Route path="/" element={<Blogs />} />
+      <Route path="/blog/category/:category" element={<CategoryBlogs />} />
     </Routes>
   );
 };
