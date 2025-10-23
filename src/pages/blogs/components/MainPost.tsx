@@ -1,6 +1,7 @@
 import React from "react";
 import type { BlogTileProps } from "./BlogTile";
 import { Calendar1Icon, Timer } from "lucide-react";
+import BlogTags from "../../../components/common/BlogTags";
 
 const MainPost: React.FC<BlogTileProps> = ({ blog }) => {
   return (
@@ -21,6 +22,7 @@ const MainPost: React.FC<BlogTileProps> = ({ blog }) => {
         <p className="text-sm sm:text-base max-w-full lg:max-w-[550px] mx-auto text-center text-gray-600 leading-relaxed">
           {blog.description}
         </p>
+        <BlogTags tags={blog.tags} className="justify-center" />
 
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 justify-center mt-3 text-gray-500 text-sm">
           <span className="flex items-center gap-2">

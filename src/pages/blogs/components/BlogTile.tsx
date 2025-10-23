@@ -2,6 +2,7 @@ import { Calendar1, Timer } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import BlogMeta from "./BlogMeta";
+import BlogTags from "../../../components/common/BlogTags";
 
 export interface BlogTileProps {
   blog: {
@@ -10,11 +11,12 @@ export interface BlogTileProps {
     description: string;
     date: string;
     readTime: string;
+    tags: string[];
   };
 }
 
 const BlogTile: React.FC<BlogTileProps> = ({ blog }) => {
-  const { imageUrl, heading, description, date, readTime } = blog;
+  const { imageUrl, heading, description, date, readTime, tags } = blog;
 
   const navigate = useNavigate();
 
@@ -40,6 +42,7 @@ const BlogTile: React.FC<BlogTileProps> = ({ blog }) => {
         <p className="text-sm sm:text-base text-gray-600 mb-3 leading-relaxed line-clamp-3">
           {description}
         </p>
+        <BlogTags tags={tags} />
         <BlogMeta date={date} readTime={readTime} />
       </div>
     </div>
