@@ -7,6 +7,8 @@ import BlogIntro from "../../components/common/BlogIntro";
 import MainPost from "./components/MainPost";
 import AppButton from "../../components/common/AppButton";
 import { blogService } from "../../services/blogs.service";
+import Newsletter from "../../components/common/Newsletter";
+import TrendingPosts from "../../components/common/TrendingPosts";
 
 const Blogs = () => {
   const [randomPost, setRandomPost] = useState(blogPosts[0]);
@@ -34,7 +36,7 @@ const Blogs = () => {
       <MainPost blog={randomPost} />
 
       {/* BLOGS */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-[180px] sm:mt-[150px] lg:mt-[180px]">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 mt-12">
         {/* LEFT SIDE POSTS */}
         <div className="blogs-list lg:col-span-3 order-1 lg:order-2">
           {blogPosts
@@ -44,15 +46,25 @@ const Blogs = () => {
             ))}
         </div>
         {/* RIGHT BAR */}
-        <div className="blogs-right-bar lg:col-span-1 order-1 lg:order-2 mb-8 lg:mb-0">
-          <BlogIntro />
-
-          <strong className="mt-5 block text-lg">Explore Categories</strong>
-          <div className="mt-3">
-            {categories.slice(0, 6).map((c, index) => (
-              <Category key={index} category={c} />
-            ))}
+        <div className="blogs-right-bar lg:col-span-1 order-1 lg:order-2 mb-8 lg:mb-0 space-y-6">
+          <div className="card-premium p-6">
+            <BlogIntro />
           </div>
+
+          <TrendingPosts />
+
+          <div className="card-premium p-6">
+            <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">
+              Explore Categories
+            </h3>
+            <div className="space-y-2">
+              {categories.slice(0, 6).map((c, index) => (
+                <Category key={index} category={c} />
+              ))}
+            </div>
+          </div>
+
+          <Newsletter />
         </div>
       </div>
     </div>

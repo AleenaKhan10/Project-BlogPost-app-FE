@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import Topbar from "./components/layout/Topbar";
 import AppRouter from "./routes/AppRouter";
 import Footer from "./components/layout/Footer";
+import BackToTop from "./components/common/BackToTop";
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
         <AppRouter />
         {!shouldHideLayout && <Footer />}
       </div>
+      <BackToTop />
     </>
   );
 }
